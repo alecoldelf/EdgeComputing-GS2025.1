@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "author": "Skyno Fps",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": 76.8, "left": -139.16, "attrs": {} },
+    { "type": "wokwi-dht22", "id": "dht1", "top": -95.7, "left": 109.8, "attrs": {} },
+    { "type": "wokwi-hc-sr04", "id": "ultrasonic1", "top": -113.7, "left": -119.3, "attrs": {} },
+    {
+      "type": "wokwi-lcd1602",
+      "id": "lcd1",
+      "top": 160,
+      "left": 15.2,
+      "attrs": { "pins": "i2c" }
+    }
+  ],
+  "connections": [
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+    [ "dht1:VCC", "esp:3V3", "red", [ "v19.2", "h-297.6", "v67.2" ] ],
+    [ "dht1:GND", "esp:GND.2", "red", [ "v0" ] ],
+    [ "dht1:SDA", "esp:4", "red", [ "v124.8", "h-153.5", "v67.2" ] ],
+    [ "ultrasonic1:VCC", "esp:5V", "black", [ "v28.8", "h-134.4", "v288" ] ],
+    [ "ultrasonic1:GND", "esp:GND.3", "black", [ "v0" ] ],
+    [ "ultrasonic1:TRIG", "esp:5", "black", [ "v28.8", "h9.2", "v182.4" ] ],
+    [ "ultrasonic1:ECHO", "esp:18", "black", [ "v0" ] ],
+    [ "lcd1:GND", "esp:GND.1", "#8f4814", [ "h-19.2", "v115.2", "h-163.2", "v-48" ] ],
+    [ "lcd1:VCC", "esp:5V", "#8f4814", [ "h-28.8", "v96.1", "h-144", "v-28.8" ] ],
+    [ "lcd1:SDA", "esp:21", "#8f4814", [ "h-19.2", "v-47.8" ] ],
+    [ "lcd1:SCL", "esp:22", "#8f4814", [ "h-19.2", "v-86.1" ] ]
+  ],
+  "dependencies": {}
+}
