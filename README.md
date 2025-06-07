@@ -73,3 +73,8 @@ https://youtu.be/Y0t1gFIB4Uc
 
 ## Licença
 Distribuído sob a licença **MIT**.
+
+## Imagens Tago e Wokwi
+![image](https://github.com/user-attachments/assets/90b9fde4-b12e-46e9-9ce9-48900b799164)
+![image](https://github.com/user-attachments/assets/f8a9cbe0-6a7c-4d0e-a455-c7ec3fc427eb)
+
